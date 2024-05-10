@@ -25,6 +25,8 @@ from django.contrib.auth.models import Permission
 
 from .views import logout
 from .views import loginpage
+from .views import inicio
+from .views import tatuador
 from .db.models import region, provincia, comuna
 from .db.models import persona, emails, telefono, direccion, cliente
 from .db.models import estudio, tatuador, reseña, portafolio, diseño
@@ -57,7 +59,8 @@ admin.site.register(detalle_factura)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('logout', logout.load),
-    path('', admin.site.urls),  
+    path('', inicio.load),  
     path('accounts/login/', loginpage.load),   
-    path('loginpage',loginpage.load),
+    path('loginpage', loginpage.load),
+    path ('tatuador', tatuador.load),  
 ]

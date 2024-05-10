@@ -114,7 +114,7 @@ class portafolio (models.Model):
 
     class Meta:
         managed = False
-        db_table = 'reseña'
+        db_table = 'portafolio'
 
 class diseño (models.Model):
     titulo = models.CharField(max_length= 45, blank=True, null=True)
@@ -126,7 +126,7 @@ class diseño (models.Model):
 
     class Meta:
         managed = False
-        db_table = 'reseña'
+        db_table = 'diseño'
 
 class materiales (models.Model):
     nombre = models.CharField(max_length= 45, blank=True, null=True)
@@ -183,4 +183,4 @@ class detalle_factura (models.Model):
 
     class Meta:
         managed = False
-        db_table = 'transacciones'
+        db_table = 'detalle_factura'

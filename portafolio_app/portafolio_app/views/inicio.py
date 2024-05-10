@@ -4,4 +4,4 @@ from django.contrib.auth import login, authenticate
 
 
 def load(request):
-    return render(request, 'loginpage.html')
+    return render(request, 'inicio.html')

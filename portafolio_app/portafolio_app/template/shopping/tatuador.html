@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        /* Estilos CSS para las cards */
+        .card {
+            width: 30%; /* Ancho de la card, ajustable según tus preferencias */
+            display: inline-block;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de portafolios de Tatuadores</h1>
+    <!-- Iterar sobre los portafolios y mostrar los datos -->
+    {% for foto in portafolios %}
+        <div>
+            <!-- Mostrar el título -->
+            <h2>{{ portafolio.titulo }}</h2>
+            <!-- Mostrar la descripción -->
+            <p>{{ portafolio.descripcion }}</p>
+            <!-- Mostrar la foto -->
+            <img src="{{ portafolio.foto }}" alt="Foto de Portafolio">
+        </div>
+    {% endfor %}
+</body>
+</html>
