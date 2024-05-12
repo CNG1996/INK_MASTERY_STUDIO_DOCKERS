@@ -472,5 +472,7 @@ INSERT INTO metodo_pago(nombre, descripcion) VALUES ("Tarjeta de Credito", "tipo
 INSERT INTO metodo_pago(nombre, descripcion) VALUES ("Tarjeta de Debito", "tipos de pago ocn tarjeta de debito");
 
 INSERT INTO portafolio(titulo, descripcion, foto, tatuador_id) VALUES("Carpa Koi", "El cliente pago por un tatuaje de carpa koi en su hombro","https://inkme.it/wp-content/uploads/2019/09/koi-loto.jpg" ,1 );
+INSERT INTO portafolio(titulo, descripcion, foto, tatuador_id) VALUES("Carpa Koi", "El cliente pago por un tatuaje de carpa koi en su hombro","https://inkme.it/wp-content/uploads/2019/09/koi-loto.jpg" ,1 );
+INSERT INTO portafolio(titulo, descripcion, foto, tatuador_id) VALUES("Carpa Koi", "El cliente pago por un tatuaje de carpa koi en su hombro","https://inkme.it/wp-content/uploads/2019/09/koi-loto.jpg" ,1 );
 
 INSERT INTO diseños(titulo, descripcion, estilo, foto, tatuador_id, portafolio_id) VALUES("Carpa Koi", "Diseño general de carpa Koi", "Japones", "https://previews.123rf.com/images/koryaba/koryaba1608/koryaba160800002/62197202-ilustración-artística-de-carpas-koi-en-estilo-del-tatuaje.jpg", 1, 1);

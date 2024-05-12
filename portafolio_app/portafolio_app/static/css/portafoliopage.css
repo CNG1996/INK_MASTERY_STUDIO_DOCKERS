@@ -142,6 +142,22 @@
     transition: 0.3s;
     
 }
+/*cards portafolio*/
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    display: flex;
+    max-width: 11000px;
+  }
+  
+  .card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
 
 /* -------------------------------------------------------------------- */
 .section__login{background-image: url('../img/seccion/tattoo_wallpaper.jpg');
@@ -163,11 +179,6 @@
     border-radius: 15px 0 0 15px;
   }
  
-#portafolio__div{
-    width: 100%;
-    display: flex;
-    max-width: 11000px;
-}
 
 
 .titulo__text{
@@ -175,6 +186,8 @@
     font-size: 16pt;
     color: var(--dark-main__cal);
 }
+
+
 
 /* SECCION FOOTER  */
 /*FOOTER ICONOS REDES SOCIALES*/

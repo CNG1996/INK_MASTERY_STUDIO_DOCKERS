@@ -7,4 +7,4 @@ def load(request):
     # Pasar los objetos al contexto de la plantilla
     context = {'portafolios': portafolios}
     # Renderizar la plantilla 'tatuador.html' con el contexto
-    return render(request, 'tatuadorpage.html', context)
+    return render(request, 'portafoliopage.html', context)
