@@ -5,7 +5,7 @@ class region (models.Model):
     latitude = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
     longitude = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
 
-    def str(self):
+    def __str__(self):
         return self.nombre
     class Meta:
         managed = False
@@ -17,7 +17,7 @@ class provincia (models.Model):
     longitude = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
     region = models.ForeignKey('region', models.DO_NOTHING, blank=True, null = True)
 
-    def str(self):
+    def __str__(self):
         return self.nombre
 
     class Meta:
@@ -30,9 +30,9 @@ class comuna (models.Model):
     longitude = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
     provincia = models.ForeignKey('provincia', models.DO_NOTHING, blank=True, null = True)
 
-    def str(self):
+    def __str__(self):
         return self.nombre
-
+    
     class Meta:
         managed = False
         db_table = 'comuna'
@@ -43,7 +43,7 @@ class persona(models.Model):
     edad = models.IntegerField ( blank=True, null=True)
     genero = models.CharField (max_length= 50, blank=True, null=True)
 
-    def str(self):
+    def __str__(self):
         return self.nombre
 
     class Meta:
@@ -54,7 +54,7 @@ class emails(models.Model):
     mail = models.CharField(max_length=150, blank=True, null=True)
     persona = models.ForeignKey('persona', models.DO_NOTHING, blank=True, null=True)
 
-    def str(self):
+    def __str__(self):
         return self.mail
 
     class Meta:
@@ -65,7 +65,7 @@ class telefono (models.Model):
     telefono = models.CharField(max_length=12, blank=True, null= True)
     persona = models.ForeignKey('persona', models.DO_NOTHING, blank=True, null=True)
 
-    def str(self):
+    def __str__(self):
         return self.telefono
 
     class Meta:
@@ -79,7 +79,7 @@ class direccion (models.Model):
     numero = models.CharField(max_length=10, blank=True, null=True)
     comuna = models.ForeignKey('comuna', models.DO_NOTHING, blank=True, null=True)
 
-    def str(self):
+    def __str__(self):
         return self.nombre
 
     class Meta:
@@ -157,7 +157,6 @@ class diseños (models.Model):
     estilo = models.CharField(max_length= 45, blank=True, null=True)
     foto = models.CharField(max_length= 200, blank=True, null=True)
     tatuador = models.ForeignKey('tatuador', models.DO_NOTHING, blank=True, null=True)
-    portafolio = models.ForeignKey('portafolio', models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
         managed = False

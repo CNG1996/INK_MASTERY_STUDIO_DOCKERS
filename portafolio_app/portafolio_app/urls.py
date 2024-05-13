@@ -28,6 +28,7 @@ from .views import loginpage
 from .views import inicio
 from .views import portafoliopage
 from .views import ReseñasPage
+from.views import PerfilTatuador
 from .db.models import region, provincia, comuna
 from .db.models import persona, emails, telefono, direccion, cliente
 from .db.models import estudio, tatuador, reseña, portafolio, diseños
@@ -64,5 +65,6 @@ urlpatterns = [
     path('accounts/login/', loginpage.load),   
     path('loginpage', loginpage.load),
     path ( 'portafolio', portafoliopage.load),
-    path ( 'reseñas', ReseñasPage.load)    
+    path ( 'reseñas', ReseñasPage.load),
+    path ( 'PerfilTatuador', PerfilTatuador.load),
 ]

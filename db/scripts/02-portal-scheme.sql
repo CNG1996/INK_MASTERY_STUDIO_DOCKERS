@@ -119,9 +119,7 @@ CREATE TABLE diseños (
   estilo VARCHAR (45),
   foto VARCHAR (200),
   tatuador_id INT,
-  portafolio_id INT,
-  FOREIGN KEY (tatuador_id) REFERENCES tatuador(id),
-  FOREIGN KEY (portafolio_id) REFERENCES portafolio(id)
+  FOREIGN KEY (tatuador_id) REFERENCES tatuador(id)
 );
 
 CREATE TABLE materiales(
